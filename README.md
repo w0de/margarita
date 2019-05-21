@@ -13,8 +13,7 @@ Quick Start
 ------------
 
 1. Clone this repository, enter directory
-2. `docker build . -t margarita`
-3. Edit the docker-compose.yml file (*required for SAML auth*):
+2. Edit the docker-compose.yml file (*required for SAML auth*):
 
   a. `/path/to/your/saml/:/app/saml` Path to SAML certs and configuration. See [SAML Configuration](#SAML Configuration).
 
@@ -22,8 +21,8 @@ Quick Start
 
   If you have preexisting volumes or host paths with this data, and would prefer not to rebuild, enter those paths here. Otherwise, leave commented.
 
-4. `SAML_AUTH_ENABLED=True docker-compose up -d`
-5. Debugging your SAML auth? `DEBUG=True SAML_AUTH_ENABLED=True docker-compose up`
+3. `SAML_AUTH_ENABLED=True docker-compose up -d`
+4. Debugging your SAML auth? `DEBUG=True SAML_AUTH_ENABLED=True docker-compose up`
 
 
 
