@@ -13,17 +13,9 @@ Quick Start
 ------------
 
 1. Clone this repository, enter directory
-2. Edit the docker-compose.yml file (*required for SAML auth*):
-
-  a. `/path/to/your/saml/:/app/saml` Path to SAML certs and configuration. See [SAML Configuration](#SAML Configuration).
-
-  b. `/path/to/your/reposado/metadata/:/reposado/metadata/` & `/path/to/your/reposado/metadata/:/reposado/metadata/`:
-
-  If you have preexisting volumes or host paths with this data, and would prefer not to rebuild, enter those paths here. Otherwise, leave commented.
-
-3. `SAML_AUTH_ENABLED=True docker-compose up -d`
+2. Set up your certs directory
+3. `SAML_AUTH_ENABLED=True SAML_PATH=/path/to/your/saml/certs python run.py`
 4. Debugging your SAML auth? `DEBUG=True SAML_AUTH_ENABLED=True docker-compose up`
-
 
 
 SAML Configuration
