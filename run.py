@@ -7,12 +7,12 @@ def main():
     if os.environ.get('MARGARITA_ENV') == 'DEVELOPMENT' or \
     'runserver' in sys.argv:
         from flask_script import Manager, Server
-        manager = Manager(app)
+        manager = Manager(margarita.app)
         manager.add_command(
         'runserver',
         Server(
             host='0.0.0.0',
-            port=80
+            port=8089
             )
         )
         manager.run()
