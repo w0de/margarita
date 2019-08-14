@@ -14,6 +14,7 @@ def main():
             host='0.0.0.0',
             port=80
             )
+        )
         manager.run()
     else:
         app.run()
